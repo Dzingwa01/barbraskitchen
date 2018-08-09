@@ -2,59 +2,78 @@
 
 @section('content')
 
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                {{--<h1 class="header center teal-text text-lighten-2">GET IT DONE</h1>--}}
-                <div class="row center">
-                    <h5 class="header col s12" style="color:white;font-weight: bolder;background-color: grey;opacity: 0.7">Let Us Assist you with your home improvements and/or alterations</h5>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="/img/sadza_veggie.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Sadza, Beef Stew & Veggie</h3>
+                    <div class="row center">
+                        <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>
+                    </div>
                 </div>
-                <div class="row center">
-                    <a href="{{url('register')}}" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Sign Up</a>
+            </li>
+            <li>
+                <img src="/img/sadza_salad.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Sadza, Braai Meat & Salad</h3>
+                    <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>
                 </div>
-                <br><br>
-
-            </div>
-        </div>
-        <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+            </li>
+            <li>
+                <img src="/img/sadza_zondo.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Sadza, Zondo & Veggie</h3>
+                    <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>
+                </div>
+            </li>
+            <li>
+                <img src="/img/matemba.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Sadza & Matemba</h3>
+                    <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>
+                </div>
+            </li>
+        </ul>
     </div>
 
-
     <div class="container">
-        <div class="section">
-
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">Home Repairs</h5>
-
-                        <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Home Cooked Meals</span>
+                        <p>We offer a variety of delicious Zimbo home cooked meals. Our meals are served while hot and are always prepared using fresh
+                        ingredients. We can cater for individual needs and for many people.Our online ordering process makes it easy for you
+                            to order meals and they are delivered to your doorstep.
+                        </p>
                     </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center">Realtime Contact with Suppliers</h5>
-
-                        <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                        <h5 class="center">Property Development</h5>
-
-                        <p class="light" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. posuere eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                    <div class="card-action">
+                        <a href="#">Menu</a>
+                        <a href="#">Order Now</a>
                     </div>
                 </div>
             </div>
-
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Venue Hire for Parties</span>
+                        <p>Our facility can be used for events such as kid parties with catering provided by our expert cooks.
+                            Contact us via email or telephonically and we will gladly attend to your hiring requirements. <a href="#contact_us" class="btn">Contact Us</a>
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More Info</a>
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="container">
+        <center><h5>Where to find us</h5></center>
+        <div class="row">
+           <p class="center">63 Campell Street, Richmond Hill, Port Elizabeth</p>
     </div>
 
     <div class="container">
@@ -62,7 +81,7 @@
             <div class="row">
                 <div class="col s12 center" id="contact_us">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4>Contact Us</h4>
+                    <h5>Contact Us</h5>
                     <div class="row">
                         <form class="col s12">
                             <div class="row">
@@ -103,6 +122,13 @@
             </div>
         </div>
     </div>
-
+<style>
+    .card{
+        height:350px;
+    }
+    .card-content{
+        height: 300px;
+    }
+</style>
 
 @endsection
