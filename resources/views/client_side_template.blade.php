@@ -20,11 +20,16 @@
             <li><a href="{{url('register')}}">Register</a></li>
 
         </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="{{url('login')}}">Login</a></li>
+            <li><a href="{{url('register')}}">Register</a></li>
+
+        </ul>
         <ul class="right hide-on-med-and-down">
             <li><a href="{{url('/')}}">Home</a></li>
             <li><a href="#about_us">About Us</a></li>
             <li><a href="#contact_us">Contact Us</a></li>
-            <li><a class="dropdown-trigger_cus" href="#dropdown1" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger_cus" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
 
         <ul id="nav-mobile-cus" class="sidenav">
@@ -41,8 +46,8 @@
 
 @yield('content')
 
-<footer class="page-footer teal">
-    <div class="container">
+<footer class="page-footer teal container-fluid">
+    <div class="container-fluid">
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">About Us</h5>
