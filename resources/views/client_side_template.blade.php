@@ -43,8 +43,10 @@
 
 </nav>
 </div>
+<div class="row">
+    @yield('content')
 
-@yield('content')
+</div>
 
 <footer class="page-footer teal container-fluid">
     <div class="container-fluid">
