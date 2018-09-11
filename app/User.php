@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
     use Notifiable;
-
+    use EntrustUserTrait;
     /**
      * The attributes that are mass assignable.
      *
@@ -30,6 +31,7 @@ class User extends Authenticatable
     public function addNew($input)
     {
         $check = static::where('facebook_id',$input['facebook_id'])->first();
+//        dd($check);
         if(is_null($check)){
             return static::create($input);
         }
