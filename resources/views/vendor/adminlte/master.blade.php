@@ -64,4 +64,9 @@
 @yield('adminlte_js')
 
 </body>
+<style>
+    .login-page{
+        background-image:url(../img/login_cover_page.jpg);
+    }
+</style>
 </html>

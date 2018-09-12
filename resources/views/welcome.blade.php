@@ -11,43 +11,14 @@
                     <li >
                         <img src="{{URL::asset($menu->picture_url)}}"> <!-- random image -->
                         <div class="caption center-align" >
-                            <h3 ><span style="background-color: grey;opacity: 0.7;">{{$menu->name}}</span></h3>
+                            <h3 ><span style="background-color: grey;opacity: 0.7;">{{$menu->name . ' - R' .$menu->prize}}</span></h3>
                             <div class="row center">
-                                <a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>
+                                <a href="/login" class="order-btn btn-large waves-effect waves-light teal lighten-1">Order Now</a>
                             </div>
                         </div>
                     </li>
                 @endforeach
-                {{--<li>--}}
-                {{--<img src="/img/sadza_veggie.jpg"> <!-- random image -->--}}
-                {{--<div class="caption center-align">--}}
-                {{--<h3>Sadza, Beef Stew & Veggie</h3>--}}
-                {{--<div class="row center">--}}
-                {{--<a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<img src="/img/sadza_salad.jpg"> <!-- random image -->--}}
-                {{--<div class="caption center-align">--}}
-                {{--<h3>Sadza, Braai Meat & Salad</h3>--}}
-                {{--<a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<img src="/img/sadza_zondo.jpg"> <!-- random image -->--}}
-                {{--<div class="caption center-align">--}}
-                {{--<h3>Sadza, Zondo & Veggie</h3>--}}
-                {{--<a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<img src="/img/matemba.jpg"> <!-- random image -->--}}
-                {{--<div class="caption center-align">--}}
-                {{--<h3>Sadza & Matemba</h3>--}}
-                {{--<a href="" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Order Now</a>--}}
-                {{--</div>--}}
-                {{--</li>--}}
+
             </ul>
         </div>
     </div>
@@ -137,6 +108,7 @@
             </div>
         </div>
     </div>
+    </div>
 <style>
     .card{
         height:350px;
@@ -145,5 +117,18 @@
         height: 300px;
     }
 </style>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="/js/materialize.js"></script>
 
+<script>
+    $(document).ready(function(){
+
+    });
+
+</script>
 @endsection
