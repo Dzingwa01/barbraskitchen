@@ -30,24 +30,21 @@ class FacebookController extends Controller
      *
      * @return void
      */
-    public function handleFacebookCallback()
+    public function handleFacebookCallback(Request $request)
     {
         try {
 
             $user = Socialite::driver('facebook')->user();
-
             $create['name'] = $user->getName();
             $create['email'] = $user->getEmail();
             $create['facebook_id'] = $user->getId();
-
             $userModel = new User;
-
             $createdUser = $userModel->addNew($create);
-
+            $value =  $request->session()->put("user_id",$createdUser->id);
 //            $client = Role::where('name','client')->first();
 //            $createdUser->attachRole($client);
 
-            return redirect()->route('home');
+            return redirect('/home/'.$createdUser->id);
 
 
         } catch (Exception $e) {

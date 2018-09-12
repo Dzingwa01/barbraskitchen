@@ -10,7 +10,7 @@
 @section('body')
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}">{!! config('adminlte.logo', '<b>Admin</b>LTE') !!}</a>
+            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}">{!! config('adminlte.logo', '<b>Barbras Kitchen</b>') !!}</a>
         </div>
 
         <div class="register-box-body">
@@ -28,6 +28,7 @@
                         </span>
                     @endif
                 </div>
+
                 <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
                     <input type="email" name="email" class="form-control" value="{{ old('email') }}"
                            placeholder="{{ trans('adminlte::adminlte.email') }}">
@@ -35,6 +36,16 @@
                     @if ($errors->has('email'))
                         <span class="help-block">
                             <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <div class="form-group has-feedback {{ $errors->has('contact_number') ? 'has-error' : '' }}">
+                    <input type="contact_number" name="contact_number" class="form-control" value="{{ old('contact_number') }}"
+                           placeholder="Phone Number">
+                    <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                    @if ($errors->has('contact_number'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('contact_number') }}</strong>
                         </span>
                     @endif
                 </div>

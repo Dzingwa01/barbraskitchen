@@ -6,7 +6,7 @@
  * Time: 02:20 PM
  */
 
-//namespace App;
+namespace App;
 
 use Zizaco\Entrust\EntrustRole;
 
