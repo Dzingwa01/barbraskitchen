@@ -10,10 +10,10 @@
 @section('body')
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}">{!! config('adminlte.logo', '<b>Barbras Kitchen</b>') !!}</a>
+            <a href="/"><span><b style="color:white;">Barbras Kitchen</b></span></a>
         </div>
 
-        <div class="register-box-body">
+        <div class="register-box-body" style="border-radius:15px;z-index: 5; box-shadow: 10px 10px;">
             <p class="login-box-msg">{{ trans('adminlte::adminlte.register_message') }}</p>
             <form action="{{ url(config('adminlte.register_url', 'register')) }}" method="post">
                 {!! csrf_field() !!}
@@ -69,8 +69,8 @@
                         </span>
                     @endif
                 </div>
-                <button type="submit"
-                        class="btn btn-primary btn-block btn-flat"
+                <button style="border-radius: 10px;" type="submit"
+                        class="btn btn-success btn-block btn-flat"
                 >{{ trans('adminlte::adminlte.register') }}</button>
             </form>
             <div class="auth-links">

@@ -68,5 +68,8 @@
     .login-page{
         background-image:url(../img/login_cover_page.jpg);
     }
+    .register-page{
+        background-image:url(../img/login_cover_page.jpg);
+    }
 </style>
 </html>
