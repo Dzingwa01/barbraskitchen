@@ -17,9 +17,21 @@ Route::get('/', function () {
 Route::get('facebook', function () {
     return view('facebook');
 });
+Route::get('admin/users','HomeController@usersIndex');
+
+Route::get('get_users','HomeController@getUsers')->name('get_users');
+Route::resource('menus','MenuController');
+
+Route::post('/menus/update/{id}','MenuController@update');
+Route::get('menu_items','MenuController@showMenus')->name('menu_items');
+Route::post('save_item','MenuController@store')->name('add_menu_item');
+Route::get('menu/delete/{id}','MenuController@destroy');
+Route::get('user/delete/{id}','HomeController@destroy');
 
 Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
 Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
 Route::get('/privacy_policy','HomeController@getPrivacyPolicy');
 Route::get('/terms_of_service','HomeController@getTermsOfService');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/{id}', 'HomeController@index');
+Route::get('/home_client', 'HomeController@indexClient')->name('home_client');
+Route::get('/home_reload', 'HomeController@indexLogin')->name('home_reload');

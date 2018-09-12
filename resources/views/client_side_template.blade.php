@@ -14,11 +14,10 @@
 <div class="navbar-fixed container-fluid">
 <nav class="white" role="navigation">
     <div class="nav-wrapper ">
-        <a id="logo-container" href="{{url('/')}}" class="brand-logo">Barbra's Eats <span style="visibility:hidden">ZimEats</span>  </a>
+        <a id="logo-container" href="{{url('/')}}" class="brand-logo"><img src="/img/logo.png"> </a>
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="{{url('login')}}">Login</a></li>
             <li><a href="{{url('register')}}">Register</a></li>
-
         </ul>
         <ul id="dropdown2" class="dropdown-content">
             <li><a href="{{url('login')}}">Login</a></li>
@@ -53,7 +52,7 @@
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">About Us</h5>
-                <p class="grey-text text-lighten-4">We are a catering company focusing primarily on serving "Zimbo" home cooked meals for individuals, families and events. We also hire out our
+                <p class="grey-text text-lighten-4">We are a catering company focusing primarily on serving "Zimbabwean" home cooked meals for individuals, families and events. We also hire out our
                     facility for events such as parties and we can provide catering for the event at affordable rates.
                 We have more than 10 years experience in preparing and serving delicious and fresh home cooked meal. Customer satisfaction is our main priority. Our prices
                 are the most affordable in town with satisfaction guaranteed.  </p>
