@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Menu;
+use App\Order;
 use Illuminate\Http\Request;
 use DB;
 use DataTables;
@@ -94,6 +95,26 @@ class MenuController extends Controller
         return view('admin.menu_view',compact('menu'));
     }
 
+    public function getItem(Menu $item){
+        return response()->json(['menu_item'=>$item]);
+    }
+
+    public function saveOrder(Request $request){
+        DB::beginTransaction();
+        try {
+            $input = $request->all();
+//            dd($input);
+            $menu_item = Menu::where('id',$input['item_id'])->first();
+            $order = Order::create(["item_id"=>$menu_item->id,"quantity"=>$input['quantity'],"user_id"=>$input['user_id'],"pickup_time"=>$input["pickup_time"],"special_instructions"=>$input["special_instructions"]]);
+            DB::commit();
+            $value =  $request->session()->put("status","Order submitted successfully.Your order will be ready by " .$order->pickup_time.'. Your order is: '.$order->quantity." X ".$menu_item->name);
+//            return response()->json(["status"=>"Order submitted successfully.Your order will be ready by " .$order->pickup_time,"order"=>$order,"menu_item"=>]);
+        }catch(\Exception $e){
+//            dd($e);
+//            return response()->json(["error"=>$e->getMessage()]);
+            return response()->json(["error"=>"An error occured. Please contact us to place your order. ".$e->getMessage()]);
+        }
+    }
     /**
      * Show the form for editing the specified resource.
      *

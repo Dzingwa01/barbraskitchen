@@ -277,7 +277,7 @@
         }
         .sidenav-overlay{z-index:99;}
     </style>
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 

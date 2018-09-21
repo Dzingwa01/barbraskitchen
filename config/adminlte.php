@@ -115,6 +115,12 @@ return [
             'icon' => 'home',
         ],
         [
+            'text'        => 'Orders',
+            'url'         => 'orders',
+            'icon'        => 'briefcase',
+            'label_color' => 'success',
+        ],
+        [
             'text'        => 'Menus',
             'url'         => 'menus',
             'icon'        => 'file',
